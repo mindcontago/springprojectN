@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import service.TaskService;
 import service.UserService;
 
+
 @Component
 public class UserController {
     private final UserService userService;
@@ -69,4 +70,6 @@ public class UserController {
     public void markTaskAsNotCompeted(Long taskId) {
         taskService.pointTaskAsNotComplete(taskId);
     }
+
+
 }

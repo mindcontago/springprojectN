@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 public class UserDao implements UserRep {
     private final List<User> userList;
-    private Long userCounterId;
+    private long userCounterId;
 
     public UserDao(List<User> userList, Long userCounterId) {
         this.userList = userList;

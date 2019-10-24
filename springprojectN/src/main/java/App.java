@@ -4,6 +4,7 @@ import models.Task;
 import models.User;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+
 public class App {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();

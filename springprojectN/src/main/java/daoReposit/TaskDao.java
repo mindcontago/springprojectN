@@ -16,12 +16,13 @@ public class TaskDao implements TaskRep {
 
     public TaskDao() {
         this.listOfTasks = new ArrayList<>();
-        this.countTaskId = 1;
+        this.countTaskId = 1L;
     }
 
     @Override
     public Task createTask(String description, User user) {
-        Task task = new Task(user.getId(), countTaskId++, description, false);
+        Task task = new Task(countTaskId, user.getId(), description, false  );
+        //Task task = new Task(user.getId(), taskId, countTaskId++, description, false);
         //Task task = new Task();
         listOfTasks.add(task);
         return task;
