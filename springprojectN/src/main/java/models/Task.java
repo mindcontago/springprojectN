@@ -11,7 +11,7 @@ import java.util.Objects;
 @Component
 @Setter
 @Getter
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 public class Task {
 
@@ -19,6 +19,13 @@ public class Task {
     private Long taskId;
     private String taskDesc;
     private boolean taskIsComplete;
+
+    public Task(Long userId, Long taskId, String taskDesc, boolean taskIsComplete) {
+        this.userId = userId;
+        this.taskId = taskId;
+        this.taskDesc = taskDesc;
+        this.taskIsComplete = taskIsComplete;
+    }
 
     @Override
     public boolean equals(Object o) {

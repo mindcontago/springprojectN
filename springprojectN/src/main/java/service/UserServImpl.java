@@ -4,6 +4,7 @@ import daoReposit.TaskRep;
 import daoReposit.UserRep;
 import exceptions.NoSuchUserException;
 import exceptions.PasswordInvalidException;
+import models.Task;
 import models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,7 @@ public class UserServImpl implements UserService {
             throw new NoSuchUserException("Email already used.");
         }
         if (userRep.saveUser(name, email, password) == null) {
-            throw new RuntimeException("You must fulfill all the fields.")
+            throw new RuntimeException("You must fulfill all the fields.");
         }
     }
 
@@ -40,5 +41,7 @@ public class UserServImpl implements UserService {
         }
         return user;
     }
+
+
 }
 
