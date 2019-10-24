@@ -65,7 +65,7 @@ public class UserController {
     public void markTaskAsCompleted(Long taskId) {
         taskService.pointTaskAsNotComplete(taskId);
     }
-    
+
     public void markTaskAsNotCompeted(Long taskId) {
         taskService.pointTaskAsNotComplete(taskId);
     }
